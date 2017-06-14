@@ -50,3 +50,5 @@ let mapleader=","           " leader is comma
 nnoremap <leader>u :GundoToggle<CR>
 
 set laststatus=2            " added to support airline
+
+set t_Co=256                " set the number of colors to 256 for tmux use.
