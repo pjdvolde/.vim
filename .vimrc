@@ -13,6 +13,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'sjl/gundo.vim'
 Plugin 'bling/vim-airline'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'mileszs/ack.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
