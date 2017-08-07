@@ -1,6 +1,11 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
-
+filetype on                  " required
+"makes the cursor move by display line
+noremap  <buffer> <silent> k gk
+noremap  <buffer> <silent> j gj
+"word  wrap uses the same level of indentation
+set breakindent
+set autoindent
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -15,6 +20,8 @@ Plugin 'bling/vim-airline'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'mileszs/ack.vim'
+Plugin 'ervandew/supertab'
+Plugin 'veloce/vim-behat'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -29,7 +36,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 "get out of INSERT-mode with jk 
-imap jk <Esc> 
+:inoremap jk <C-[>
 colorscheme molokai         " use the old textmate colorscheme
 syntax on                   " enable syntax highlighting
 set wildmenu                " visual autocomplete in the command menu
@@ -55,3 +62,5 @@ nnoremap <leader>u :GundoToggle<CR>
 set laststatus=2            " added to support airline
 
 set t_Co=256                " set the number of colors to 256 for tmux use.
+
+set guifont=Monaco:h13
